@@ -2,14 +2,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  background-color: #f4f4f4;
 }
 
 .container {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   overflow: hidden;
 }
@@ -20,128 +17,82 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("background.jpg");
+  background-image: url("aloe_leaf.png"); /* Use aloe-leaf.png as the background image */
   background-size: cover;
   background-position: center;
-  opacity: 0.3;
+  opacity: 0.7;
   z-index: -1;
 }
 
 .aloe-leaf {
-  max-width: 250px;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 20%;
   height: auto;
-  margin-right: 40px;
 }
 
 .product-info {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
-  max-width: 400px;
-  width: 80%;
+  color: #fff;
 }
 
 .product-info h1 {
-  font-size: 28px;
-  margin-bottom: 15px;
-  color: #555555;
+  font-size: 26px;
+  margin-bottom: 10px;
 }
 
 .product-info p {
-  font-size: 18px;
-  color: #555555;
-  margin-bottom: 30px;
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
 .cta-button {
   display: inline-block;
   padding: 12px 24px;
   background-color: #8db596;
-  color: #ffffff;
+  color: #fff;
+  font-size: 18px;
   text-decoration: none;
-  border-radius: 30px;
-  transition: background-color 0.3s;
-  font-weight: bold;
-  letter-spacing: 1px;
+  border-radius: 5px;
+  /* Add 3D button effect */
+  box-shadow: 0 6px #6c8d76;
+  position: relative;
+  transition: transform 0.2s;
 }
 
 .cta-button:hover {
-  background-color: #639876;
+  background-color: #71a085;
+  /* Add 3D button hover effect */
+  transform: translate(0, 2px);
 }
 
-.section {
-  padding: 40px;
-  background-color: #ffffff;
-  margin-top: 50px;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
+/* Add 3D effect to form input fields and submit button */
+.form-group label {
+  font-size: 18px;
 }
 
 input[type="text"],
-input[type="email"] {
+input[type="email"],
+button[type="submit"] {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
+  font-size: 18px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  /* Add 3D effect */
+  box-shadow: 0 6px #6c8d76;
+  transition: transform 0.2s;
 }
 
-button[type="submit"] {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #8db596;
-  color: #ffffff;
-  text-decoration: none;
-  border: none;
-  border-radius: 30px;
-  transition: background-color 0.3s;
-  font-weight: bold;
-  letter-spacing: 1px;
-  cursor: pointer;
-}
-
+input[type="text"]:focus,
+input[type="email"]:focus,
 button[type="submit"]:hover {
-  background-color: #639876;
-}
-
-.image-slider {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.image-slider img {
-  display: none;
-  max-width: 100%;
-  height: auto;
-}
-
-.product-showcase {
-  margin-top: 30px;
-}
-
-.product-showcase h3 {
-  font-size: 24px;
-  color: #555555;
-  margin-bottom: 10px;
-}
-
-.product-showcase ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.product-showcase li {
-  margin-bottom: 5px;
-  cursor: pointer;
-}
-
-.product-showcase li.selected {
-  font-weight: bold;
-  color: #8db596;
+  outline: none;
+  /* Add 3D effect on focus/hover */
+  transform: translate(0, 2px);
 }
